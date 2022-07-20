@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <chrono>
 
 using namespace std;
 
@@ -54,9 +55,18 @@ int main()
     vector<int> nums={-1,1,0,2,-1};
     vector<vector<int>> res;
     const int target=0;
-
-    res=Solution(nums,target);
+    //auto start=chrono::steady_clock::now();
+    clock_t start_t,end_t;
+    start_t=clock();
+    for(int i=0;i<1000;i++)
+        res=Solution(nums,target);
     
+    end_t=clock();
+    double total=static_cast<double>(end_t-start_t)/CLOCKS_PER_SEC;
+    printf("%f\n",total);
+    //auto end =chrono::steady_clock::now();
+    //auto diff =(end-start);
+    //cout<<chrono::duration<double,milli>(diff).count() <<"ms"<<endl;
     for(auto &iter1:res)
     {
         for(auto &iter2:iter1)
