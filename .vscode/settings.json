@@ -7,6 +7,14 @@
         "ostream": "cpp",
         "iterator": "cpp",
         "xhash": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "functional": "cpp",
+        "map": "cpp",
+        "memory": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xstring": "cpp"
     }
 }
